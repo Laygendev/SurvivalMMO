@@ -1,0 +1,39 @@
+{
+    "walk_right_back_0": {
+        "x": 1020,
+        "y": 168,
+        "width": 85,
+        "height": 168
+    },
+    "walk_right_back_1": {
+        "x": 1105,
+        "y": 168,
+        "width": 85,
+        "height": 168
+    },
+    "walk_right_back_2": {
+        "x": 1190,
+        "y": 168,
+        "width": 85,
+        "height": 168
+    },
+    "walk_right_back_3": {
+        "x": 1275,
+        "y": 168,
+        "width": 85,
+        "height": 168
+    },
+    "walk_right_back_4": {
+        "x": 1360,
+        "y": 168,
+        "width": 85,
+        "height": 168
+    },
+    "walk_right_back_5": {
+        "x": 1445,
+        "y": 168,
+        "width": 85,
+        "height": 168
+    }
+}
+

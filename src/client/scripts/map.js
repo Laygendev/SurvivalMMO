@@ -18,7 +18,7 @@ function drawMap() {
     for (var i = 0; i < map.length; i++) {
         for (var j = 0; j < map[i].length; j++) {
             drawTile = map[i][j];
-            ctx.drawImage(tileGraphics[drawTile], (i - j) * tileW + mapX, (i + j) * tileH / 2 + mapY);
+            ctx.drawImage(assets[drawTile], (i - j) * tileW + mapX, (i + j) * tileH / 2 + mapY);
         }
     }
 }
