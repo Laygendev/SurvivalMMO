@@ -1,5 +1,11 @@
 var assets = [];
 var hero = null;
+var hero2 = null;
+
+var posCursor = {
+  x: 0,
+  y: 0
+};
 
 function main() {
     loadImg();
@@ -9,10 +15,19 @@ function main() {
 function loop() {
     window.requestAnimationFrame(loop);
 
+    document.getElementById('main').getContext('2d').clearRect(0, 0, 800, 600);
+    
+    var cellPos = screenToIso(posCursor.x, posCursor.y);
+    var screenCellPos = isoToScreen(cellPos.cellX, cellPos.cellY);
+    
+    drawMap();
+      document.getElementById('main').getContext('2d').drawImage(assets[3], screenCellPos.x, screenCellPos.y);
     if (hero) {
-        hero.update();
-        hero.render();
+      hero.update();
+      hero.render();
     }
+
+    
 }
 
 (function() {

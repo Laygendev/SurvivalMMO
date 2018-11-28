@@ -3,7 +3,8 @@ function loadImg() {
     var assetsLoad = [
         "assets/tilemap/64/isometric_64_0000.png",
         "assets/tilemap/64/isometric_64_0001.png",
-        "assets/character/unicorn_atlas.png"
+        "assets/character/unicorn_atlas_820.png",
+        "assets/tilemap/64/hover.png"
     ],
     assetsLoaded = 0;
 
@@ -14,7 +15,6 @@ function loadImg() {
     assets[i].onload = function() {
       assetsLoaded++;
       if (assetsLoaded === assetsLoad.length) {
-          drawMap();
           createCharacter();
       }
     }

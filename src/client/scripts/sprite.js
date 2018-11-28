@@ -11,9 +11,9 @@ function sprite (options) {
     that.image      = options.image;
     that.animations = options.animations;
     that.loop       = options.loop;
-    that.currentAnimation = 'walk_right_back';
-    
-    console.log(that.animations);
+    that.currentAnimation = options.currentAnimation;
+    that.pos              = options.pos;
+    numberOfFrames = that.animations[that.currentAnimation].numberOfFrames;
     
     that.update = function() {
         tickCount += 1;
@@ -31,18 +31,17 @@ function sprite (options) {
     };
     
     that.render = function() {
-        that.context.clearRect(0, 0, that.width, that.height);
         
         that.context.drawImage(
             that.image,
-            that.animations[ that.currentAnimation + '_' + frameIndex ].x,
-            that.animations[ that.currentAnimation + '_' + frameIndex ].y,
-            that.animations[ that.currentAnimation + '_' + frameIndex ].width,
-            that.animations[ that.currentAnimation + '_' + frameIndex ].height,
-            0,
-            0,
-            that.animations[ that.currentAnimation + '_' + frameIndex ].width,
-            that.animations[ that.currentAnimation + '_' + frameIndex ].height);
+            that.animations[that.currentAnimation].images[frameIndex].x,
+            that.animations[that.currentAnimation].images[frameIndex].y,
+            that.animations[that.currentAnimation].images[frameIndex].width,
+            that.animations[that.currentAnimation].images[frameIndex].height,
+            that.pos.x,
+            that.pos.y,
+            that.animations[that.currentAnimation].images[frameIndex].width,
+            that.animations[that.currentAnimation].images[frameIndex].height);
     };
     
     return that;
