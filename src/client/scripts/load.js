@@ -1,7 +1,7 @@
 
 function loadImg() {
     var assetsLoad = [
-        "assets/tilemap/64/isometric_64_0000.png",
+        "assets/tilemap/64/isometric_0000.png",
         "assets/tilemap/64/isometric_64_0001.png",
         "assets/character/unicorn_atlas_820.png",
         "assets/tilemap/64/hover.png"

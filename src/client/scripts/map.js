@@ -28,10 +28,10 @@ function drawMap() {
 }
 
 function screenToIso (screenX, screenY) {
-    var cellX = Math.round(screenY / tileH + screenX / tileW);
-    var cellY = Math.round(screenY / tileH - screenX / tileW);
+    var cellX = Math.round(screenY / (tileH / 2) + screenX / tileW);
+    var cellY = Math.round(screenY / (tileH / 2) - screenX / tileW);
     
-    console.log(screenX, screenY);
+    console.log(cellX, cellY);
 
     return {
       cellX: cellX,
