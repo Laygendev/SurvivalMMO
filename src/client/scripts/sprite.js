@@ -13,6 +13,7 @@ function sprite (options) {
     that.loop       = options.loop;
     that.currentAnimation = options.currentAnimation;
     that.pos              = options.pos;
+    that.origin           = options.origin || { x: 0, y: 0};
     numberOfFrames = that.animations[that.currentAnimation].numberOfFrames;
     
     that.update = function() {
@@ -38,8 +39,8 @@ function sprite (options) {
             that.animations[that.currentAnimation].images[frameIndex].y,
             that.animations[that.currentAnimation].images[frameIndex].width,
             that.animations[that.currentAnimation].images[frameIndex].height,
-            that.pos.x,
-            that.pos.y,
+            that.pos.x + that.origin.x,
+            that.pos.y + that.origin.y,
             that.animations[that.currentAnimation].images[frameIndex].width,
             that.animations[that.currentAnimation].images[frameIndex].height);
     };
